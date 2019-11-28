@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtRiskRate = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblStkp
@@ -82,7 +83,7 @@
             this.txtStrkP.Location = new System.Drawing.Point(452, 15);
             this.txtStrkP.Name = "txtStrkP";
             this.txtStrkP.Size = new System.Drawing.Size(100, 22);
-            this.txtStrkP.TabIndex = 4;
+            this.txtStrkP.TabIndex = 2;
             this.txtStrkP.Validating += new System.ComponentModel.CancelEventHandler(this.txtStrkP_Validating);
             // 
             // txtTTM
@@ -90,7 +91,7 @@
             this.txtTTM.Location = new System.Drawing.Point(196, 98);
             this.txtTTM.Name = "txtTTM";
             this.txtTTM.Size = new System.Drawing.Size(100, 22);
-            this.txtTTM.TabIndex = 5;
+            this.txtTTM.TabIndex = 3;
             this.txtTTM.Validating += new System.ComponentModel.CancelEventHandler(this.txtTTM_Validating);
             // 
             // txtStdrD
@@ -98,14 +99,16 @@
             this.txtStdrD.Location = new System.Drawing.Point(452, 101);
             this.txtStdrD.Name = "txtStdrD";
             this.txtStdrD.Size = new System.Drawing.Size(100, 22);
-            this.txtStdrD.TabIndex = 6;
+            this.txtStdrD.TabIndex = 4;
+            this.txtStdrD.Validating += new System.ComponentModel.CancelEventHandler(this.txtStdrD_Validating);
             // 
             // txtStkP
             // 
             this.txtStkP.Location = new System.Drawing.Point(196, 17);
             this.txtStkP.Name = "txtStkP";
             this.txtStkP.Size = new System.Drawing.Size(100, 22);
-            this.txtStkP.TabIndex = 7;
+            this.txtStkP.TabIndex = 1;
+            this.txtStkP.Validating += new System.ComponentModel.CancelEventHandler(this.txtStkP_Validating);
             // 
             // label5
             // 
@@ -121,23 +124,33 @@
             this.txtRiskRate.Location = new System.Drawing.Point(196, 190);
             this.txtRiskRate.Name = "txtRiskRate";
             this.txtRiskRate.Size = new System.Drawing.Size(100, 22);
-            this.txtRiskRate.TabIndex = 9;
+            this.txtRiskRate.TabIndex = 5;
+            this.txtRiskRate.Validating += new System.ComponentModel.CancelEventHandler(this.txtRiskRate_Validating);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(320, 251);
+            this.button1.Location = new System.Drawing.Point(450, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
-            this.button1.TabIndex = 10;
+            this.button1.Size = new System.Drawing.Size(102, 43);
+            this.button1.TabIndex = 6;
             this.button1.Text = "Calculate";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(15, 282);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 17);
+            this.lblResult.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(628, 481);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRiskRate);
             this.Controls.Add(this.label5);
@@ -150,7 +163,7 @@
             this.Controls.Add(this.lblStDeviation);
             this.Controls.Add(this.lblStkp);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Pricing Options";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +182,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtRiskRate;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
